@@ -1,0 +1,480 @@
+.collapse
+  display: none
+  &.in
+    display: block
+
+.nav
+  list-style: none
+  margin-bottom: 0
+  padding-left: 0
+  &::before, &::after
+    content: ' '
+    display: table
+  &::after
+    clear: both
+  &.nav-schedule > li::after
+    border-color: #3d3457
+  > li
+    display: block
+    position: relative
+    > a
+      display: block
+      padding: 10px 15px
+      position: relative
+      &:hover, &:focus
+        background-color: #eee
+        text-decoration: none
+
+.tab-content >
+  .tab-pane
+    display: none
+  .active
+    display: block
+
+.panel
+  background-color: #fff
+  border: 1px solid transparent
+  border-radius: 4px
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05)
+  margin-bottom: 20px
+
+.panel-group
+  margin-bottom: 20px
+  .panel
+    border-radius: 4px
+    margin-bottom: 0
+    overflow: hidden
+    + .panel
+      margin-top: 5px
+
+.container
+  position: relative
+  &::before, &::after
+    content: ' '
+    display: table
+
+.row
+  &::before, &::after
+    content: ' '
+    display: table
+
+.container::after, .row::after
+  clear: both
+
+.schedule .schedule-item .lecture-icon-wrapper, .nav-wrapper .nav-current
+  border-color: #3d3457
+
+.nav.nav-schedule > li.active
+  background-color: #3d3457
+
+.highlight
+  color: #3d3457
+
+a
+  color: #3d3457
+  &:hover, &:active, &:focus
+    color: #3d3457
+
+.fa, .icon
+  color: #3d3457
+
+.schedule .schedule-item
+  .schedule-item-toggle.collapsed .title .icon, .schedule-item-body .speaker-name
+    color: #3d3457
+
+\::selection, ::-moz-selection
+  background-color: rgba(254, 73, 24, .85)
+  color: #fff
+
+.icon, .fa
+  line-height: 1
+
+.schedule
+  background-color: #fff
+  margin-bottom: 50px
+  text-align: left
+  .tab-content
+    border-color: transparent #e9e9e9 #e9e9e9
+    border-style: solid
+    border-width: 0 1px 1px
+    padding: 0
+    .img-responsive
+      margin: 0
+  .tab-content-schedule
+    border: 0
+    padding: 90px 100px 80px 80px
+    position: relative
+    &::before
+      border-right: 1px solid #eff1f5
+      bottom: 0
+      content: ''
+      display: block
+      left: 104px
+      position: absolute
+      top: 0
+      width: 0
+    .panel-group
+      margin-bottom: 0
+    .schedule-item
+      background-color: transparent
+      margin-bottom: 22px
+      min-height: 65px
+      padding: 0 0 0 104px
+      position: relative
+      &:last-child
+        margin-bottom: 0
+
+.nav.nav-schedule
+  border-color: #e9e9e9
+  border-style: solid
+  border-width: 0 1px 0 0
+  display: table
+  width: 100%
+  z-index: 10
+  > li
+    border-color: #e9e9e9
+    border-style: solid
+    border-width: 1px 0 1px 1px
+    display: table-cell
+    font-size: 15px
+    margin-bottom: 0
+    position: relative
+    transition: background .2s ease, border .2s ease
+    &::after
+      border-bottom-color: transparent
+      border-left-color: transparent
+      border-right-color: transparent
+      border-style: solid
+      border-width: 7px 10px 0
+      bottom: -6px
+      content: ''
+      height: 0
+      left: 50%
+      margin-left: -8px
+      opacity: 0
+      position: absolute
+      transition: opacity .15s ease
+      width: 0
+      z-index: 1
+    > a
+      display: block
+      padding: 20px 15px 12px
+      text-align: center
+      text-decoration: none
+      transition: color .2s ease
+      *
+        &:first-child
+          margin-top: 0
+        &:last-child
+          margin-bottom: 0
+      &:hover, &:focus
+        background-color: transparent
+      h5:first-child
+        margin: 0 0 -2px
+    &.active
+      cursor: default
+      pointer-events: none
+      &::after
+        opacity: 1
+      &:hover, &:active
+        cursor: default
+        pointer-events: none
+      a
+        color: #fff
+        &:hover, &:focus, *, &:hover *, &:focus *
+          color: #fff
+
+  .schedule-item
+    + .schedule-item
+      margin-top: 0
+    .schedule-item-toggle
+      color: #000
+      display: block
+      margin-bottom: 0
+      text-decoration: none
+      .time
+        font-size: 15px
+        margin-bottom: 10px
+        .icon
+          color: #babfcc
+          margin-right: 8px
+          vertical-align: middle
+      .title
+        border-bottom: 1px solid #eff1f5
+        margin: 0
+        padding: 0 35px 11px 0
+        position: relative
+        .icon
+          bottom: 11px
+          color: #51545b
+          font-size: 13px
+          position: absolute
+          right: 10px
+          transition: transform .3s ease
+    .schedule-item-body
+      margin-top: 0
+      > article
+        margin: 0
+        padding: 11px 0
+      .speaker-name
+        display: inline-block
+        font-size: 11px
+        text-transform: uppercase
+        letter-spacing: 0.5em
+
+.lecture-icon-wrapper
+  background-color: #fff
+  border-radius: 50%
+  border-style: solid
+  border-width: 1px
+  font-size: 20px
+  height: 40px
+  left: 4px
+  line-height: 36px
+  overflow: hidden
+  position: absolute
+  text-align: center
+  top: 25px
+  vertical-align: middle
+  width: 40px
+
+@media (max-width: 991px)
+  .schedule .tab-content .img-responsive
+    margin: 0
+
+@media (max-width: 767px)
+  .schedule
+    .tab-content
+      border: 0
+    .tab-content-schedule
+      padding: 35px 20px
+      &::before
+        display: none
+      .schedule-item
+        margin-bottom: 30px
+        padding-left: 70px
+
+@media (max-width: 480px)
+  .schedule .tab-content-schedule
+    padding: 35px 0
+    .schedule-item
+      margin-bottom: 30px
+      padding-left: 0
+      .lecture-icon-wrapper
+        top: 27px
+        left: 0
+        width: 30px
+        height: 30px
+        font-size: 16px
+        line-height: 28px
+      .schedule-item-toggle .title
+        padding-left: 40px
+    .speaker-name
+      padding-left: 0
+      padding-right: 0
+
+.nav-wrapper
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  position: relative
+  .nav-current
+    position: relative
+    margin: 0
+    display: none
+    width: auto
+    height: auto
+    padding: 15px 55px 10px 15px
+    border-radius: 0
+    z-index: auto
+    cursor: pointer
+    *
+      max-width: 100%
+      overflow: hidden
+      text-overflow: ellipsis
+      &:last-child
+        margin-bottom: 0
+
+.tab-content, .tab-pane
+  zoom: 1
+
+.tab-content:before, .tab-pane:before, .tab-content:after, .tab-pane:after
+  content: ""
+  display: table
+
+.tab-content:after, .tab-pane:after
+  clear: both
+
+.tab-content
+  padding-bottom: 50px
+  .img-responsive
+    margin: 0 auto
+
+@media (max-width: 767px)
+  .nav
+    box-shadow: (-1px) 8px 16px 0 rgba(0, 0, 0, 0.18)
+    float: none
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    display: block
+    display: none
+    padding: 0
+    height: auto
+    width: auto
+    max-height: 200px
+    text-align: left
+    background-color: #ffffff
+    border-style: solid
+    border-width: 0 1px 1px
+    border-color: #e9e9e9
+    z-index: 5
+    overflow-x: hidden
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    &.nav-schedule
+      box-shadow: (-1px) 8px 16px 0 rgba(0, 0, 0, 0.18)
+      float: none
+      position: static
+      top: 100%
+      left: 0
+      right: 0
+      display: block
+      padding: 0
+      height: auto
+      width: auto
+      max-height: 200px
+      text-align: left
+      background-color: #ffffff
+      border-style: solid
+      border-width: 0 1px 1px
+      border-color: #e9e9e9
+      z-index: 5
+      overflow-x: hidden
+      overflow-y: auto
+      -webkit-overflow-scrolling: touch
+    &::before, &.nav-schedule:before, &::after
+      display: none
+    &.nav-schedule
+      &::after
+        display: none
+      > li
+        display: inline-block
+        width: 100%
+        border: none
+        background-color: transparent
+      > li:before, > li:after
+        display: none
+      > li.active
+        border: none
+        // background-color: transparent
+      > li.active > a, > li.active > a:hover, > li.active > a:focus
+        background-color: inherit
+        color: white
+        border: none
+        opacity: 1
+      > li.active > a *, > li.active > a:hover *, > li.active > a:focus *
+        color: inherit
+      > li > a, > li:not(.active) > a
+        display: inline-block
+        padding: 10px 15px
+        width: 100%
+        text-align: left
+        background-color: inherit
+        border: inherit
+        color: inherit
+      > li > a:before, > li:not(.active) > a:before, > li > a:after, > li:not(.active) > a:after
+        display: none
+      > li > a:hover, > li:not(.active) > a:hover, > li > a:focus, > li:not(.active) > a:focus, > li > a:active, > li:not(.active) > a:active
+        color: inherit
+        background-color: rgba(239, 241, 245, 0.4)
+      > li > a *, > li:not(.active) > a *
+        color: inherit
+      > li > a *:last-child, > li:not(.active) > a *:last-child
+        margin-bottom: 0
+    > li
+      display: inline-block
+      width: 100%
+      border: none
+      background-color: transparent
+    > li:before, > li:after
+      display: none
+    > li.active
+      border: none
+      background-color: transparent
+    > li.active > a, > li.active > a:hover, > li.active > a:focus
+      background-color: inherit
+      color: #3d3457
+      border: none
+      opacity: 1
+    > li.active > a *, > li.active > a:hover *, > li.active > a:focus *
+      color: inherit
+    > li > a, > li:not(.active) > a
+      display: inline-block
+      padding: 10px 15px
+      width: 100%
+      text-align: left
+      background-color: inherit
+      border: inherit
+      color: inherit
+    > li > a:before, > li:not(.active) > a:before, > li > a:after, > li:not(.active) > a:after
+      display: none
+    > li > a:hover, > li:not(.active) > a:hover, > li > a:focus, > li:not(.active) > a:focus, > li > a:active, > li:not(.active) > a:active
+      color: inherit
+      background-color: rgba(239, 241, 245, 0.4)
+    > li > a *, > li:not(.active) > a *
+      color: inherit
+    > li > a *:last-child, > li:not(.active) > a *:last-child
+      margin-bottom: 0
+  .nav-wrapper
+    margin-bottom: 20px
+    .nav-current
+      display: block
+
+.panel-group .panel
+  box-shadow: none
+  border-radius: 0
+  background-clip: padding-box
+  border: none
+  + .panel
+    margin-top: 8px
+
+.nav-current
+  transition: color 0.2s ease, background 0.2s ease, border 0.2s ease
+  position: relative
+  margin: 0 0 15px
+  vertical-align: top
+  display: inline-block
+  width: 100%
+  height: 39px
+  padding: 0 32px 0 10px
+  font-size: 13px
+  color: #8d93a0
+  line-height: 35px
+  white-space: nowrap
+  background-color: #ffffff
+  border: 1px solid #e9e9e9
+  border-radius: 2px
+  z-index: 10
+  cursor: pointer
+  overflow: hidden
+  text-overflow: ellipsis
+  &:hover
+    color: #51545b
+  &::after
+    position: absolute
+    top: 50%
+    right: 12px
+    margin-top: -2px
+    width: 0
+    height: 0
+    content: ""
+    border-style: solid
+    border-width: 5px 4px 0 4px
+    border-color: #babfcc transparent transparent transparent
+
+.time .icon-clock
+  opacity: .7
+  margin-right: 5px

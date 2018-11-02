@@ -1,0 +1,56 @@
+.hero-jumbotron
+  +flex-center
+  background: image-url('index/bg1.jpg') center no-repeat
+  background-attachment: fixed
+  background-size: cover
+  color: white
+  font-family: 'PT Sans Caption', sans-serif
+  min-height: 100vh
+  text-align: center
+  text-transform: uppercase
+  width: 100%
+
+.hero-social
+  display: block
+  position: absolute
+  top: 45px
+  a
+    color: inherit
+    font-size: 1.5em
+    margin: 10px
+    transition: .3s color
+    &:hover
+      color: $primary-color
+
+// === hero-title
+.hero-title
+  height: 100%
+  margin-top: 45px
+  & > *
+    width: 100%
+
+.intro-header
+  font-size: 6em
+  @media (max-width: $tablet-breakpoint)
+    font-size: 3em
+
+.details-header
+  font-size: 19px
+  letter-spacing: .5em
+  line-height: 1.7
+  i
+    color: $primary-color
+    &:not(:first-child)
+      margin-left: 15px
+
+.sub-header
+  font-family: 'Roboto', sans-serif
+  font-size: 20px
+  font-weight: 300
+  text-transform: none
+
+.hero-buttons
+  a.button
+    font-family: 'Roboto Mono', monospace
+    margin-bottom: 5px
+// === hero-title

@@ -1,0 +1,42 @@
+// === Cores
+$primary-color: #2196f3
+$tablet-breakpoint: 768px
+// =========
+
+=flex-center
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.no-decoration
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+.text-primary
+  color: $primary-color
+
+.hidden-tablet
+  @media (max-width: $tablet-breakpoint)
+    display: none !important
+
+.visible-tablet
+  @media (min-width: $tablet-breakpoint)
+    display: none !important
+
+.link
+  cursor: pointer
+
+.blink-me
+  animation: blinker 1s linear infinite
+
+@keyframes blinker
+  50%
+    opacity: 0
+
+.text-dark
+  color: #555 !important
+
+.text-white
+  color: white

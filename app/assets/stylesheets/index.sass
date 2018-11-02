@@ -1,0 +1,87 @@
+@import 'index/header'
+@import 'index/nav'
+@import 'index/schedule'
+@import 'index/footer'
+
+.main-container-bg
+  padding-bottom: 20px
+
+.main-container
+  background: white
+  box-shadow: 0 6px 18px 2px rgba(0, 0, 0, .05)
+  min-height: 2000px
+  padding: 20px 0
+  & > *
+    margin-top: 40px
+  h1.header
+    font-size: 3em
+    font-weight: 400
+  i
+    color: $primary-color
+
+.text-center
+  text-align: center
+
+.section
+  padding: 50px 0
+
+.section.about
+  .menu
+    border: 0 !important
+    box-shadow: none
+    margin-top: 60px
+    .item
+      border: 0
+      font-size: 1.2em
+      font-weight: bold
+      letter-spacing: .1em
+      margin-left: 5px
+    .item.active
+      border: 0
+      color: $primary-color
+    i
+      margin-right: 8px
+
+  .header
+    font-weight: 400
+  p
+    line-height: 29px
+
+.section.counters
+  padding: 90px 0
+  .statistic .value
+    font-weight: bold
+
+.section.speakers
+  .speaker-name
+    color: $primary-color
+    font-size: 13px
+    font-weight: 700
+    letter-spacing: .3em
+    line-height: 14px
+    text-transform: uppercase
+  .sub.header
+    line-height: 29px
+    padding: 15px
+
+.bg-cover
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.bg5
+  background-image: image-url('index/bg5.jpg')
+  &.overlay
+    position: relative
+    z-index: 1
+  &.overlay::before
+    background-color: #262627
+    bottom: 0
+    content: ''
+    left: 0
+    opacity: .7
+    position: absolute
+    right: 0
+    top: 0
+    z-index: -1
