@@ -10,13 +10,13 @@
   background: white
   box-shadow: 0 6px 18px 2px rgba(0, 0, 0, .05)
   min-height: 2000px
-  padding: 20px 0
+  padding-top: 20px
   & > *
     margin-top: 40px
   h1.header
     font-size: 3em
     font-weight: 400
-  i
+  i[class*="icon-"]:not([class*="text-"])
     color: $primary-color
 
 .text-center
@@ -63,6 +63,46 @@
   .sub.header
     line-height: 29px
     padding: 15px
+
+.section.enrollment
+  background: image-url('8bit-dreaming.jpg') no-repeat
+  background-size: cover
+  padding: 100px
+  margin-top: 0
+  h1.header
+    padding-bottom: 40px
+
+  .cards.transparent-back .card
+    background: rgba(255, 255, 255, 0.8)
+
+.card-price
+  background: rgba(0, 0, 0, 0.1)
+  font-size: 1.6em
+  letter-spacing: 1px
+  text-align: center
+  font-weight: bold
+  margin-bottom: 5px
+  padding: 15px 0
+  width: 100%
+
+.ui.fluid.button.price-button
+  background: rgba(0, 0, 0, 0.1)
+  font-size: 1.6em
+  letter-spacing: 1px
+
+.card-benefits-list
+  display: flex
+  flex-direction: column
+  list-style: none
+  margin: 0
+  padding: 0
+  text-align: center
+  li
+    font-size: 1.5em
+    // font-weight: 300
+    padding: 10px 0
+    margin: 0
+    width: 100%
 
 .bg-cover
   background-attachment: fixed
