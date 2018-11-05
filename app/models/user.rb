@@ -46,11 +46,11 @@ class User < ApplicationRecord
   def category_image
     case category
     when 1
-      return 'andrew_s_tanenbaum'
+      return 'andrew_s_tanenbaum.jpg'
     when 2
-      return 'alan_turing'
+      return 'alan_turing.jpg'
     when 3
-      return 'ada_lovelace'
+      return 'ada_lovelace.jpg'
     end
   end
 
