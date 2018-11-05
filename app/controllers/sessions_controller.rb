@@ -14,6 +14,7 @@ class SessionsController < DeviseController
     # respond_with(resource, serialize_options(resource))
     respond_to do |format|
       format.js
+      format.html { redirect_to root_path }
     end
   end
 
@@ -23,7 +24,7 @@ class SessionsController < DeviseController
     return respond_to do |format|
       format.js
     end unless self.resource
-    
+
     set_flash_message!(:notice, :signed_in)
     sign_in(resource_name, resource)
     yield resource if block_given?
