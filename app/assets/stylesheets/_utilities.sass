@@ -33,6 +33,27 @@ $tablet-breakpoint: 768px
 .blink-me
   animation: blinker 1s linear infinite
 
+.lined.header
+  position: relative
+  &::before
+    content: ''
+    height: 2px
+    width: 32%
+    background: #d4d4d4
+    position: absolute
+    top: 50%
+    z-index: 2
+    left: 0
+  &::after
+    content: ''
+    height: 2px
+    width: 32%
+    background: #d4d4d4
+    position: absolute
+    top: 50%
+    z-index: 2
+    right: 0
+
 @keyframes blinker
   50%
     opacity: 0

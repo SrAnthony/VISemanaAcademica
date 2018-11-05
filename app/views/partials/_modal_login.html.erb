@@ -1,0 +1,40 @@
+<div class="ui tiny coupled second modal" id="modal-login">
+  <i class="close icon"></i>
+
+  <div class="content">
+
+    <h2 class="ui center aligned lined header">
+      <div class="content">
+        Entrar
+      </div>
+    </h2>
+
+    <p class="text-center form-subtitle">
+      Use seu email e senha para fazer login.
+    </p>
+
+    <div class="description">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), remote: true,
+            html: {class: 'ui form', id: 'login_form'}) do |f| %>
+        <div class="field">
+          <%= f.label :email, 'Email' %>
+          <%= f.email_field :email, autocomplete: 'email', placeholder: 'Email', id: 'user_email_login', required: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password, 'Senha' %>
+          <%= f.password_field :password, placeholder: 'Senha', id: 'user_password_login', required: true %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+  <div class="actions">
+    <button class="ui deny button">
+      Voltar
+    </button>
+    <button type="submit" form="login_form" class="ui green button">
+      Login
+    </button>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+<%= content_for :javascript do %>
+<script>
+  $('#modal-user')
+    .modal('setting', 'transition', 'fade up')
+    .modal('setting', 'closable', false)
+    .modal('show');
+</script>
+<% end %>
+<%= content_for :javascript do %>
+  <script>
+    $('#modal-user-account')
+      .modal('setting', 'transition', 'fade up')
+      .modal('setting', 'closable', false)
+      .modal('show');
+  </script>
+<% end %>
+
+<%= render 'index/header' %>
+
+<div class="ui tiny modal" id="modal-user-account">
+
+  <div class="content">
+
+    <h2 class="ui center aligned lined header">
+      <div class="content">
+        Minha conta
+      </div>
+    </h2>
+
+    <p class="text-center form-subtitle">
+      Olá, <%= current_user.name %>!<br>
+    </p>
+
+    <div class="description">
+
+      <div class="ui two columns stackable grid">
+
+        <div class="column">
+          <h3 class="ui center aligned header">
+            <div class="content">
+              Categoria selecionada
+              <div class="sub header">
+                <br>
+                <a class="ui <%= current_user.category_color %> image label">
+                  <%= image_tag current_user.category_image %>
+                  <%= current_user.category_name %>
+                  <div class="detail"><%= current_user.category_price %></div>
+                </a>
+              </div>
+            </div>
+          </h3>
+        </div>
+
+        <div class="column">
+          <h3 class="ui center aligned header">
+            <div class="content">
+              Status do pagamento
+              <div class="sub header">
+                <br>
+                <a class="ui image green label">
+                  <i class="dollar sign icon"></i>
+                  Pago
+                </a>
+              </div>
+            </div>
+          </h3>
+        </div>
+
+      </div>
+
+      <hr class="ui hidden divider">
+      <hr class="ui hidden divider">
+      <hr class="ui hidden divider">
+
+      <form class="ui form">
+        <h4 class="ui dividing header">Seu cadastro</h4>
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <label>Nome</label>
+              <input type="text" value="<%= current_user.first_name %>" disabled>
+            </div>
+            <div class="field">
+              <label>Sobrenome</label>
+              <input type="text" value="<%= current_user.last_name %>" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <label>CPF</label>
+              <input type="text" value="<%= current_user.cpf %>" disabled>
+            </div>
+            <div class="field">
+              <label>Matrícula</label>
+              <input type="text" value="<%= current_user.matricula %>" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input type="text" value="<%= current_user.email %>" disabled>
+        </div>
+
+      </form>
+
+    </div> <!-- description -->
+
+  </div>
+
+  <div class="actions">
+    <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+  </div>
+
+</div> <!-- Modal -->

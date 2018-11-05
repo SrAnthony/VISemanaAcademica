@@ -1,0 +1,11 @@
+var needs_payment = 'Sua categoria está salva, porém você precisará realizar o pagamento para ter acesso aos benefícios.';
+var free = 'Sua categoria está salva! Você poderá alterá-la usando seu email e senha ;)';
+var category = <%= current_user.category_needs_payment? %>;
+var text = category ? needs_payment : free;
+swal({
+  title: '<%= current_user.category_name %>',
+  text: text,
+  type: 'success'
+}).then(function(){
+  window.location = 'account';
+})

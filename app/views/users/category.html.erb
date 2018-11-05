@@ -1,0 +1,167 @@
+<%= content_for :javascript do %>
+  <script>
+    $('#modal-user')
+      .modal('setting', 'transition', 'fade up')
+      .modal('setting', 'closable', false)
+      .modal('show');
+  </script>
+<% end %>
+
+<%= render 'index/header' %>
+
+<div class="ui modal" id="modal-user">
+
+  <div class="content">
+
+    <h2 class="ui center aligned lined header">
+      <div class="content">
+        Categoria
+      </div>
+    </h2>
+
+    <p class="text-center form-subtitle">
+      Escolha abaixo em qual categoria você quer se inscrever.<br>
+      Se mudar de ideia, poderá mudar de categoria sem problemas ;)
+    </p>
+
+    <div class="description">
+
+      <div class="ui three stackable cards transparent-back">
+
+        <div class="ui raised card">
+          <div class="image">
+            <%= image_tag 'andrew_s_tanenbaum.jpg' %>
+          </div>
+          <div class="content">
+            <a class="header" href="https://pt.wikipedia.org/wiki/Andrew_Stuart_Tanenbaum" target="_blank">
+              Andrew S. Tanenbaum
+            </a>
+            <div class="meta">
+              <span class="date">Criador do MINIX</span>
+            </div>
+            <div class="description">
+
+              <%= link_to user_update_category_path(1), class: 'ui vertical animated fluid large button price-button',
+                  method: :patch, remote: true do %>
+                <div class="hidden content">INSCREVER-SE</div>
+                <div class="visible content">
+                  GRATUITO
+                </div>
+              <% end %>
+
+              <ul class="card-benefits-list">
+                <li>
+                  Palestras
+                </li>
+                <li>
+                  <strike>Workshops</strike>
+                </li>
+                <li>
+                  <strike>Minicursos</strike>
+                </li>
+                <li>
+                  <strike>Campeonatos</strike>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="extra content">
+            <i class="check icon"></i>
+            121 Inscritos
+          </div>
+        </div>
+
+        <div class="ui raised card">
+          <div class="image">
+            <%= image_tag 'alan_turing.jpg' %>
+          </div>
+          <div class="content">
+            <a class="header" href="https://pt.wikipedia.org/wiki/Alan_Turing" target="_blank">
+              Alan Turing
+            </a>
+            <div class="meta">
+              <span class="date">Pai da computação</span>
+            </div>
+            <div class="description">
+
+              <%= link_to user_update_category_path(2), class: 'ui vertical animated fluid large button price-button',
+                  method: :patch, remote: true do %>
+                <div class="hidden content">INSCREVER-SE</div>
+                <div class="visible content">
+                  R$ 15,00
+                </div>
+              <% end %>
+
+              <ul class="card-benefits-list">
+                <li>
+                  Palestras
+                </li>
+                <li>
+                  Workshops
+                </li>
+                <li>
+                  Minicursos
+                </li>
+                <li>
+                  <strike>Campeonatos</strike>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="extra content">
+            <i class="check icon"></i>
+            121 Inscritos
+          </div>
+        </div>
+
+        <div class="ui raised card">
+          <div class="image">
+            <%= image_tag 'ada_lovelace.jpg' %>
+          </div>
+          <div class="content">
+            <a class="header" href="https://pt.wikipedia.org/wiki/Ada_Lovelace" target="_blank">
+              Ada Lovelace
+            </a>
+            <div class="meta">
+              <span class="date">Primeira programadora da história</span>
+            </div>
+            <div class="description">
+
+              <%= link_to user_update_category_path(3), class: 'ui vertical animated fluid large button price-button',
+                  method: :patch, remote: true do %>
+                <div class="hidden content">INSCREVER-SE</div>
+                <div class="visible content">
+                  R$ 25,00
+                </div>
+              <% end %>
+
+              <ul class="card-benefits-list">
+                <li>
+                  Palestras
+                </li>
+                <li>
+                  Workshops
+                </li>
+                <li>
+                  Minicursos
+                </li>
+                <li>
+                  Campeonatos
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="extra content">
+            <i class="check icon"></i>
+            121 Inscritos
+          </div>
+        </div>
+
+      </div> <!-- ui cards -->
+
+    </div>
+  </div>
+</div>

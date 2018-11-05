@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SemanaAcademica</title>
+    <title>VI Semana Academica - Ciência da Computação</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta charset="utf-8">
@@ -10,9 +10,12 @@
     <%= stylesheet_link_tag    'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <%# <script src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script> %>
   </head>
 
   <body>
     <%= yield %>
+
+    <%= yield :javascript %>
   </body>
 </html>

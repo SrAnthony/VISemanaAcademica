@@ -10,6 +10,11 @@
 #  remember_created_at    :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  first_name             :string
+#  last_name              :string
+#  cpf                    :string
+#  matricula              :string
+#  category               :integer
 #
 
 require 'test_helper'

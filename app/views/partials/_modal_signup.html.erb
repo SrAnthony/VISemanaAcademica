@@ -1,0 +1,76 @@
+<div class="ui tiny coupled first modal" id="modal-signup">
+  <i class="close icon"></i>
+
+  <div class="content">
+
+    <h2 class="ui center aligned lined header">
+      <div class="content">
+        Inscrição
+      </div>
+    </h2>
+
+    <p class="text-center form-subtitle">
+      Preencha os dados abaixo para realizar sua inscrição.<br>
+      Você irá selecionar a categoria logo em seguida :)
+    </p>
+
+    <div class="description">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true,
+       html: {class: 'ui form', id: 'signup_form'}) do |f| %>
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <%= f.label :first_name, 'Nome' %>
+              <%= f.text_field :first_name, placeholder: 'Primeiro nome', required: true %>
+            </div>
+            <div class="field">
+              <%= f.label :last_name, 'Sobrenome' %>
+              <%= f.text_field :last_name, placeholder: 'Sobrenome', required: true %>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <%= f.label :cpf, 'CPF' %>
+              <%= f.text_field :cpf, placeholder: 'CPF', class: 'cpf-mask', required: true %>
+            </div>
+            <div class="field">
+              <%= f.label :matricula, 'Matrícula' %>
+              <%= f.text_field :matricula, placeholder: 'Matrícula', class: 'matricula-mask' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= f.label :email, 'Email' %>
+          <%= f.email_field :email, autocomplete: 'email', placeholder: 'Email', id: 'user_email_signup', required: true %>
+        </div>
+
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <%= f.label :password, 'Senha' %>
+              <%= f.password_field :password, placeholder: 'Senha', id: 'user_password_signup', required: true %>
+            </div>
+            <div class="field">
+              <%= f.label :password_confirmation, 'Confirmação de senha' %>
+              <%= f.password_field :password_confirmation, placeholder: 'Confirme sua senha', required: true %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+  <div class="actions">
+    <button class="ui button to-login">
+      Já tenho cadastro
+    </button>
+    <button type="submit" form="signup_form" class="ui green right labeled icon button">
+      Inscrever
+      <i class="checkmark icon"></i>
+    </button>
+  </div>
+</div>

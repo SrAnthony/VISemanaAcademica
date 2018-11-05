@@ -1,5 +1,9 @@
 {
   "name": "SemanaAcademica",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery-mask-plugin": "^1.14.15",
+    "jquery.nicescroll": "^3.7.6",
+    "sweetalert2": "^7.28.11"
+  }
 }
