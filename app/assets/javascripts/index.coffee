@@ -15,7 +15,7 @@ $(document).on 'turbolinks:load', ->
   $('.matricula-mask').mask('0000000000000000');
 
   # Abre o modal de cadastro ao clicar nos botões de 'inscrever-se'
-  $('.price-button').click ->
+  $('.price-button, .signup-modal').click ->
     $('#modal-signup')
       .modal('setting', 'transition', 'fade up')
       .modal('show');
