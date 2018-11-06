@@ -15,6 +15,7 @@
 #  cpf                    :string
 #  matricula              :string
 #  category               :integer
+#  transaction_code       :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

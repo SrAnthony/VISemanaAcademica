@@ -15,6 +15,7 @@
 #  cpf                    :string
 #  matricula              :string
 #  category               :integer
+#  transaction_code       :string
 #
 
 class User < ApplicationRecord
@@ -54,7 +55,7 @@ class User < ApplicationRecord
     end
   end
 
-  def category_price
+  def category_named_price
     case category
     when 1
       return 'GRATUITO'
@@ -62,6 +63,17 @@ class User < ApplicationRecord
       return 'R$ 15,00'
     when 3
       return 'R$ 25,00'
+    end
+  end
+
+  def category_price
+    case category
+    when 1
+      return '0'
+    when 2
+      return '15.00'
+    when 3
+      return '25.00'
     end
   end
 
@@ -78,5 +90,18 @@ class User < ApplicationRecord
 
   def category_needs_payment?
     category != 1
+  end
+
+  def payment_status
+    payment = PagseguroAdapter.payment_status(self)
+    return 'Aguardando...' if payment[:status] == :error
+    status = payment[:response][:status]
+    if status.in? [1,2]
+      return 'Aprovado'
+    elsif status == 3
+      return 'Em análise'
+    else
+      return 'Cancelado'
+    end
   end
 end

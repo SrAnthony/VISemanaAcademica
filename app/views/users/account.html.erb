@@ -1,18 +1,11 @@
 <%= content_for :javascript do %>
-<script>
-  $('#modal-user')
-    .modal('setting', 'transition', 'fade up')
-    .modal('setting', 'closable', false)
-    .modal('show');
-</script>
-<% end %>
-<%= content_for :javascript do %>
   <script>
     $('#modal-user-account')
       .modal('setting', 'transition', 'fade up')
       .modal('setting', 'closable', false)
       .modal('show');
   </script>
+  <script async src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
 <% end %>
 
 <%= render 'index/header' %>
@@ -44,7 +37,7 @@
                 <a class="ui <%= current_user.category_color %> image label">
                   <%= image_tag current_user.category_image %>
                   <%= current_user.category_name %>
-                  <div class="detail"><%= current_user.category_price %></div>
+                  <div class="detail"><%= current_user.category_named_price %></div>
                 </a>
               </div>
             </div>
@@ -57,10 +50,14 @@
               Status do pagamento
               <div class="sub header">
                 <br>
-                <a class="ui image green label">
-                  <i class="dollar sign icon"></i>
-                  Pago
-                </a>
+                <% if current_user.transaction_code.present? %>
+                  <%= current_user.payment_status %>
+                <% else %>
+                  <%= link_to user_generate_payment_path, class: 'ui image yellow label', method: :post, remote: true do %>
+                    <i class="dollar sign icon"></i>
+                    Pendente
+                  <% end %>
+                <% end %>
               </div>
             </div>
           </h3>

@@ -1,0 +1,36 @@
+<% if @response[:status] == :ok %>
+  PagSeguroLightbox({
+    code: '<%= @response[:code] %>'
+    }, {
+    success: function(transaction_code) {
+      var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+      var url = '/update_transaction_code';
+      var data = {
+        user_id: current_user.id,
+        transaction_code: transaction_code,
+        authenticity_token: AUTH_TOKEN
+      }
+      $.post(url, data)
+      swal({
+        title: 'Uhuul!',
+        text: 'Em breve o status do pagamento será atualizado ;)',
+        type: 'success'
+      })
+    },
+    abort: function() {
+      swal({
+        title: 'Pagamento cancelado',
+        text: 'Não foi possível identificar o pagamento. Você pode começar o processo novamente caso deseje.',
+        type: 'error'
+      })
+    }
+  });
+<% else %>
+  swal({
+    title: 'Ops..',
+    text: 'Um erro ocorreu ao gerar a sua fatura. Entre em contato conosco!',
+    type: 'error'
+  })
+<% end %>
+
+// codigo da transacao C5F708C8-B5CD-4E01-9555-8ABD150A778F

@@ -15,6 +15,7 @@
 #  cpf                    :string
 #  matricula              :string
 #  category               :integer
+#  transaction_code       :string
 #
 
 require 'test_helper'

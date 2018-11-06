@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   get 'account' => 'users#account', as: :user_account
   get 'category' => 'users#category', as: :user_category
+  post 'generate_payment' => 'users#generate_payment', as: :user_generate_payment
+  post 'update_transaction_code' => 'users#update_transaction_code', as: :user_update_transaction_code
   patch 'update_category/:category' => 'users#update_category', as: :user_update_category
 end
