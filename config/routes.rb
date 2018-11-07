@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations', sessions: 'sessions' }
-  root 'index#index'
+  # root 'index#index'
+  root 'index#under_construction'
 
+  get 'admin' => 'index#index'
   get 'account' => 'users#account', as: :user_account
   get 'category' => 'users#category', as: :user_category
   post 'generate_payment' => 'users#generate_payment', as: :user_generate_payment
