@@ -2,7 +2,7 @@ class PagseguroAdapter
   API_CHECKOUT = 'https://ws.pagseguro.uol.com.br/v2/checkout/'
   API_TRANSACTIONS = 'https://ws.pagseguro.uol.com.br/v3/transactions/'
   TOKEN = ENV['PAGSEGURO_TOKEN']
-  EMAIL = 'financeiro@uffs.cafe'
+  EMAIL = ENV['PAGSEGURO_EMAIL']
 
   class << self
     def generate_payment_token(user)
