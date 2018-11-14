@@ -1,0 +1,134 @@
+<div id="schedule-day-2" class="tab-pane">
+  <!-- Second level content start -->
+  <div class="tab-content tab-content-schedule">
+    <!-- Main content start -->
+    <div class="tab-pane">
+      <!-- Accordion start -->
+      <div class="panel-group">
+
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Palestras</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-user"></i>',
+          speaker: 'Paulo',
+          title: 'Bioinformática',
+          time: '13:30 - 15:00',
+          place: 'Auditório Bloco B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-people"></i>',
+          speaker: 'Emílio, Raquel e Guilherme',
+          title: 'Roda de conversa com professores',
+          time: '19:00 - 20:30',
+          place: 'Auditório Bloco B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/becker.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'João Becker',
+          title: 'Geração Procedural de Terrenos para Jogos',
+          time: '21:00 - 22:30',
+          place: 'Auditório Bloco B'
+        %>
+
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+
+        <div class="ui hidden divider"></div>
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Minicursos</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/raphael.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Raphael Borges',
+          title: 'Visão Computacional',
+          time: '13:00 - 15:30',
+          place: '402 B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/raphael.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Raphael Borges',
+          title: 'Visão Computacional',
+          time: '15:30 - 17:00',
+          place: '402 B'
+        %>
+
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+
+        <div class="ui hidden divider"></div>
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Atividades</h2>
+          </div>
+        </div>
+
+        <div class="panel schedule-item">
+          <div class="lecture-icon-wrapper">
+            <i class="icon-trophy"></i>
+          </div>
+          <div>
+            <strong class="time highlight">
+              <i class="icon-clock text-dark"></i> 13:30 - 15:00 | 401 B
+            </strong>
+            <h4>
+              Campeonato de truco
+            </h4>
+          </div>
+          <div class="schedule-item-body">
+            <article>
+
+              <p class="description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.
+              </p>
+
+            </article>
+
+            <div class="ui divider"></div>
+          </div>
+        </div>
+
+        <div class="panel schedule-item">
+          <div class="lecture-icon-wrapper">
+            <i class="icon-trophy"></i>
+          </div>
+          <div>
+            <strong class="time highlight">
+              <i class="icon-clock text-dark"></i> 15:30 - 17:00 | 401 B
+            </strong>
+            <h4>
+              Campeonato de truco
+            </h4>
+          </div>
+          <div class="schedule-item-body">
+            <article>
+
+              <p class="description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.
+              </p>
+
+            </article>
+
+            <div class="ui divider"></div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Accordion end -->
+    </div>
+    <!-- Main content end -->
+  </div>
+  <!-- Second level content end -->
+
+</div>

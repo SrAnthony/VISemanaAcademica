@@ -1,0 +1,92 @@
+<div id="schedule-day-3" class="tab-pane">
+  <!-- Second level content start -->
+  <div class="tab-content tab-content-schedule">
+    <!-- Main content start -->
+    <div class="tab-pane">
+      <!-- Accordion start -->
+      <div class="panel-group">
+
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Palestras</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/grazi.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Graziela Tonin',
+          title: 'Dívida técnica',
+          time: '13:30 - 15:00',
+          place: ''
+        %>
+
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+
+        <div class="ui hidden divider"></div>
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Minicursos</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/jaenisch.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Lucas Jaenisch',
+          title: 'Oficina de modelagem 3D',
+          time: '19:00 - 20:30',
+          place: '404 B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/jaenisch.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Lucas Jaenisch',
+          title: 'Oficina de modelagem 3D',
+          time: '21:00 - 22:30',
+          place: '404 B'
+        %>
+
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+
+        <div class="ui hidden divider"></div>
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Atividades</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/denioduarte.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Denio Duarte',
+          title: 'Cinedebate: Big Data e o Poder da Informação',
+          time: '15:30 - 17:00',
+          place: '401 B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/galli.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Gabriel Galli',
+          title: 'Workshop Latex',
+          time: '19:00 - 20:30',
+          place: '402 B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/galli.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Gabriel Galli',
+          title: 'Workshop Latex',
+          time: '21:00 - 22:30',
+          place: '402 B'
+        %>
+
+      </div>
+      <!-- Accordion end -->
+    </div>
+    <!-- Main content end -->
+  </div>
+  <!-- Second level content end -->
+
+</div>

@@ -1,0 +1,92 @@
+<div id="schedule-day-1" class="tab-pane active">
+  <!-- Second level content start -->
+  <div class="tab-content tab-content-schedule">
+    <!-- Main content start -->
+    <div class="tab-pane active">
+      <!-- Accordion start -->
+      <div class="panel-group">
+
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Palestras</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-user"></i>',
+          speaker: 'Braulio Adriano Melo',
+          title: 'Simulação',
+          time: '13:30 - 15:00',
+          place: 'Auditório Bloco B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/jaenisch.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Lucas Jaenisch e Matheus Vieira',
+          title: 'Conheça a Fronteiratec: Release do jogo Brocdoom',
+          time: '15:30 - 17:00',
+          place: 'Auditório Bloco B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/denioduarte.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Denio Duarte',
+          title: 'Conheça a Fronteiratec: Release do jogo Brocdoom',
+          time: '19:00 - 20:30',
+          place: 'Auditório Bloco B'
+        %>
+
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+
+        <div class="ui hidden divider"></div>
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Minicursos</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/tomkelski.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Anderson Tomkelski',
+          title: 'Shell Script',
+          time: '19:00 - 20:30',
+          place: '402 B'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/tomkelski.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Anderson Tomkelski',
+          title: 'Shell Script',
+          time: '21:00 - 22:30',
+          place: '402 B'
+        %>
+
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+
+        <div class="ui hidden divider"></div>
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Atividades</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/emilio.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Emílio Wuerges',
+          title: 'Cinedebates: As maravilhas da lógica',
+          time: '15:30 - 17:00',
+          place: '401 B'
+        %>
+
+      </div>
+      <!-- Accordion end -->
+    </div>
+    <!-- Main content end -->
+  </div>
+  <!-- Second level content end -->
+
+</div>
