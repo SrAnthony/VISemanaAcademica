@@ -1,4 +1,4 @@
-<div id="schedule-day-2" class="tab-pane">
+<div id="schedule-day-2" class="tab-pane ">
   <!-- Second level content start -->
   <div class="tab-content tab-content-schedule">
     <!-- Main content start -->
@@ -13,19 +13,30 @@
         </div>
 
         <%= render 'index/sections/schedule_days/template',
-          image: '<i class="icon-user"></i>',
-          speaker: 'Paulo',
-          title: 'Bioinformática',
+          image: image_tag('speakers/paulobuker.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Paulo Burke',
+          title: 'Computação na biologia? A bioinformática precisa de você!',
           time: '13:30 - 15:00',
-          place: 'Auditório Bloco B'
+          place: 'Auditório Bloco B',
+          descricao: 'Paulo Burke é Mestre em Ciências da Computação pela Universidade Federal de São Paulo, doutorando e representante discente do Programa de Pós-graduação em Bioinformática da USP. Suas pesquisas envolvem o desenvolvimento de modelos matemático-computacionais para simulação de sistemas bioquímicos complexos e redes biológicas.'
         %>
 
         <%= render 'index/sections/schedule_days/template',
           image: '<i class="icon-people"></i>',
-          speaker: 'Emílio, Raquel e Guilherme',
+          speaker: 'ABNTigers',
+          title: 'Computação Competitiva',
+          time: '13:30 - 15:00',
+          place: 'Auditório Bloco B',
+          descricao: 'Uma conversa com o time ABNTiger que participaram da última maratona nascional de programação.'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-people"></i>',
+          speaker: 'Profº Emílio, Profª Raquel e Profº Guilherme',
           title: 'Roda de conversa com professores',
           time: '19:00 - 20:30',
-          place: 'Auditório Bloco B'
+          place: 'Auditório Bloco B',
+          descricao: 'Tire suas dúvidas com os professores e conheça mais sobre sua caminhadas na Acadêmia'
         %>
 
         <%= render 'index/sections/schedule_days/template',
@@ -33,7 +44,8 @@
           speaker: 'João Becker',
           title: 'Geração Procedural de Terrenos para Jogos',
           time: '21:00 - 22:30',
-          place: 'Auditório Bloco B'
+          place: 'Auditório Bloco B',
+          descricao: 'Geração procedural em jogos é um conjunto de algoritmos usados como uma ferramenta para criar grandes quantidades de conteúdo em arquivos de tamanhos mínimos.'
         %>
 
         <!-- =============================================================================== -->
@@ -51,16 +63,9 @@
           image: image_tag('speakers/raphael.jpg', class: 'img-responsive', width: '100%'),
           speaker: 'Raphael Borges',
           title: 'Visão Computacional',
-          time: '13:00 - 15:30',
-          place: '402 B'
-        %>
-
-        <%= render 'index/sections/schedule_days/template',
-          image: image_tag('speakers/raphael.jpg', class: 'img-responsive', width: '100%'),
-          speaker: 'Raphael Borges',
-          title: 'Visão Computacional',
-          time: '15:30 - 17:00',
-          place: '402 B'
+          time: '13:00 - 17:00',
+          place: 'LAB 402 B',
+          descricao: 'Descubra e Aprenda o básico de Visão Computacional'
         %>
 
         <!-- =============================================================================== -->
@@ -74,54 +79,15 @@
           </div>
         </div>
 
-        <div class="panel schedule-item">
-          <div class="lecture-icon-wrapper">
-            <i class="icon-trophy"></i>
-          </div>
-          <div>
-            <strong class="time highlight">
-              <i class="icon-clock text-dark"></i> 13:30 - 15:00 | 401 B
-            </strong>
-            <h4>
-              Campeonato de truco
-            </h4>
-          </div>
-          <div class="schedule-item-body">
-            <article>
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-people"></i>',
+          speaker: 'Campeonato de Truco',
+          title: 'Campeonato de Truco',
+          time: '13:00 - 17:00',
+          place: 'SALA 401 B',
+          descricao: 'Junte com sua Dupla e bote a prova todas suas habilidades com o Truco!'
+        %>
 
-              <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.
-              </p>
-
-            </article>
-
-            <div class="ui divider"></div>
-          </div>
-        </div>
-
-        <div class="panel schedule-item">
-          <div class="lecture-icon-wrapper">
-            <i class="icon-trophy"></i>
-          </div>
-          <div>
-            <strong class="time highlight">
-              <i class="icon-clock text-dark"></i> 15:30 - 17:00 | 401 B
-            </strong>
-            <h4>
-              Campeonato de truco
-            </h4>
-          </div>
-          <div class="schedule-item-body">
-            <article>
-
-              <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.
-              </p>
-
-            </article>
-
-            <div class="ui divider"></div>
-          </div>
         </div>
 
       </div>
@@ -130,5 +96,3 @@
     <!-- Main content end -->
   </div>
   <!-- Second level content end -->
-
-</div>

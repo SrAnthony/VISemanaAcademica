@@ -1,0 +1,89 @@
+<div id="schedule-day-4" class="tab-pane ">
+  <!-- Second level content start -->
+  <div class="tab-content tab-content-schedule">
+    <!-- Main content start -->
+    <div class="tab-pane">
+      <!-- Accordion start -->
+      <div class="panel-group">
+
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Palestras</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/gabrielAlura.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Gabriel Ferreira',
+          title: 'Como se tornar relevante na área de TI sem ser um Rockstar',
+          time: '13:30 - 15:00',
+          place: '',
+          descricao: 'Desenvolvedor, instrutor e criador de conteúdo na Alura e grupo Caelum,'
+        %>
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-people"></i>',
+          speaker: 'Juliomar Marchetti',
+          title: 'A realidade sobre as empresas de tecnologia em CCO',
+          time: '19:30 - 21:00',
+          place: '',
+          descricao: 'Conheça sobre a realidade sobre as empresas de tecnologia aqui na regiap de Chapecó.'
+        %>
+
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+
+        <div class="ui hidden divider"></div>
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Minicursos</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-people"></i>',
+          speaker: 'Wagner Titon',
+          title: 'Programação com robótica',
+          time: '13:00 - 17:00',
+          place: 'LAB 402 B',
+          descricao: 'Dê os seus primeiros passos na Robotica!'
+        %>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/luan.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Luan Felix Pimentel',
+          title: 'Design Thinking',
+          time: '19:00 - 22:00',
+          place: 'LAB 404 B',
+          descricao: 'Design Thinking é o conjunto de métodos e processos para abordar problemas, relacionados a futuras aquisições de informações, análise de conhecimento e propostas de soluções.'
+        %>
+
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+        <!-- =============================================================================== -->
+
+        <div class="ui hidden divider"></div>
+        <div class="panel schedule-item">
+          <div class="schedule-item-body">
+            <h2><i class="icon-microphone"></i> Atividades</h2>
+          </div>
+        </div>
+
+        <%= render 'index/sections/schedule_days/template',
+          image: image_tag('speakers/denioduarte.jpg', class: 'img-responsive', width: '100%'),
+          speaker: 'Profº Marco Spohn',
+          title: 'Cinedebate: Homem x Maquina',
+          time: '19:30 - 21:00',
+          place: 'SALA 308 B',
+          descricao: 'A internet não é mais somente uma rede de computadores e servidores. Agora ela está presente em objetos inteligentes que nos conhecem, sabem o que gostamos de comer e as músicas que gostamos de ouvir. São devices inusitados que nos escutam, nos influenciam e fazem parte das nossas vidas. Se a internet ganhou um corpo, até onde ela pode ir?'
+        %>
+
+
+      </div>
+      <!-- Accordion end -->
+    </div>
+    <!-- Main content end -->
+  </div>
+  <!-- Second level content end -->
+
+</div>
