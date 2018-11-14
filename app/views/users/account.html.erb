@@ -51,11 +51,27 @@
               <div class="sub header">
                 <br>
                 <% if current_user.transaction_code.present? %>
-                  <%= current_user.payment_status %>
+                  <% status = current_user.payment_status %>
+                  <% if status == -1 %>
+                    <span class="ui label">
+                      <i class="icon-hourglass"></i> Aguardando...
+                    </span>
+                  <% elsif status.in? [1, 2, 3] %>
+                    <span class="ui green label">
+                      <i class="icon-like"></i> Pago! :)
+                    </span>
+                  <% elsif status.in? [4, 5] %>
+                    <span class="ui red label">
+                      <i class="icon-dislike"></i> Cancelado :/
+                    </span>
+                  <% else %>
+                    <%= link_to user_generate_payment_path, class: 'ui image yellow label', method: :post, remote: true do %>
+                      <i class="dollar sign icon"></i> Pendente
+                    <% end %>
+                  <% end %>
                 <% else %>
                   <%= link_to user_generate_payment_path, class: 'ui image yellow label', method: :post, remote: true do %>
-                    <i class="dollar sign icon"></i>
-                    Pendente
+                    <i class="dollar sign icon"></i> Pendente
                   <% end %>
                 <% end %>
               </div>

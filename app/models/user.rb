@@ -94,14 +94,8 @@ class User < ApplicationRecord
 
   def payment_status
     payment = PagseguroAdapter.payment_status(self)
-    return 'Aguardando...' if payment[:status] == :error
-    status = payment[:response][:status]
-    if status.in? [1,2]
-      return 'Aprovado'
-    elsif status == 3
-      return 'Em análise'
-    else
-      return 'Cancelado'
-    end
+    return -1 if payment[:status] == :error
+
+    payment[:response][:transaction][:status].to_i
   end
 end
