@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def category; end
 
   def update_category
+    return redirect_to user_account_path if current_user.transaction_code.present?
     category = params[:category].to_i
     category = 1 unless category.in?([1, 2, 3])
     current_user.update! category: category

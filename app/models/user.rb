@@ -58,7 +58,7 @@ class User < ApplicationRecord
   def category_named_price
     case category
     when 1
-      return 'GRATUITO'
+      return 'R$ 0'
     when 2
       return 'R$ 15,00'
     when 3

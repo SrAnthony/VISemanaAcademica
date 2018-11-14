@@ -34,7 +34,12 @@
               Categoria selecionada
               <div class="sub header">
                 <br>
-                <a class="ui <%= current_user.category_color %> image label">
+                <%# Se não tiver código ele ainda pode mudar de categoria %>
+                <% if current_user.transaction_code.present? %>
+                  <a class="ui <%= current_user.category_color %> image label">
+                <% else %>
+                  <a href="/category" class="ui <%= current_user.category_color %> image label">
+                <% end %>
                   <%= image_tag current_user.category_image %>
                   <%= current_user.category_name %>
                   <div class="detail"><%= current_user.category_named_price %></div>
