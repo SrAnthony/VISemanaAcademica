@@ -17,23 +17,26 @@
           speaker: 'Braulio Adriano Melo',
           title: 'Simulação',
           time: '13:30 - 15:00',
-          place: 'Auditório Bloco B'
+          place: 'Auditório Bloco B',
+          descricao: 'Saiba mais sobre a área de simulação na computação'
         %>
 
         <%= render 'index/sections/schedule_days/template',
-          image: image_tag('speakers/jaenisch.jpg', class: 'img-responsive', width: '100%'),
+          image: image_tag('speakers/fronteiratec.jpg', class: 'img-responsive', width: '100%'),
           speaker: 'Lucas Jaenisch e Matheus Vieira',
           title: 'Conheça a Fronteiratec: Release do jogo Brocdoom',
           time: '15:30 - 17:00',
-          place: 'Auditório Bloco B'
+          place: 'Auditório Bloco B',
+          descricao: 'Lançamento do Jogo Brocdoom produzido pela Fronteiratec, a empresa júnior de computação da UFFS. Além de conhecer o jogo, venha conhecer a Fronteiratec'
         %>
 
         <%= render 'index/sections/schedule_days/template',
           image: image_tag('speakers/denioduarte.jpg', class: 'img-responsive', width: '100%'),
           speaker: 'Denio Duarte',
-          title: 'Conheça a Fronteiratec: Release do jogo Brocdoom',
+          title: 'Vida Acadêmica na Computação',
           time: '19:00 - 20:30',
-          place: 'Auditório Bloco B'
+          place: 'Auditório Bloco B',
+          descricao: 'Quer saber mais sobre a vida acadêmica, os desafios e caminhos e também conhecer sobre a SBC.'
         %>
 
         <!-- =============================================================================== -->
@@ -52,15 +55,9 @@
           speaker: 'Anderson Tomkelski',
           title: 'Shell Script',
           time: '19:00 - 20:30',
-          place: '402 B'
-        %>
-
-        <%= render 'index/sections/schedule_days/template',
-          image: image_tag('speakers/tomkelski.jpg', class: 'img-responsive', width: '100%'),
-          speaker: 'Anderson Tomkelski',
-          title: 'Shell Script',
-          time: '21:00 - 22:30',
-          place: '402 B'
+          place: 'LAB 402 B',
+          descricao: 'Shell script é uma linguagem script usada em vários sistemas operativos, possuindo também difersos interpretadores como o bash, usado na maioria das ditribuições GNU/Linux.
+                      O objetivo desse workshop é entender a estrutura de um script shell e iniciar a construção de seus primeiros scripts usando diversas ferramentas que uma distribuição GNU/Linux pode te oferecer. '
         %>
 
         <!-- =============================================================================== -->
@@ -74,13 +71,14 @@
           </div>
         </div>
 
-        <%= render 'index/sections/schedule_days/template',
+        <!-- <%= render 'index/sections/schedule_days/template',
           image: image_tag('speakers/emilio.jpg', class: 'img-responsive', width: '100%'),
           speaker: 'Emílio Wuerges',
           title: 'Cinedebates: As maravilhas da lógica',
           time: '15:30 - 17:00',
-          place: '401 B'
-        %>
+          place: ' SALA 401 B',
+          descricao: 'O documentário percorre uma incrível jornada matemática e filosófica no mundo da lógica. Trabalhando com sua equipe, o apresentador Dave Cliff, professor de ciência da computação e engenharia na Universidade de Bristol, revela os fundamentos do raciocínio de Aristóteles a Alice no País das Maravilhas, passando por sci-fi e supercomputadores.'
+        %> -->
 
       </div>
       <!-- Accordion end -->
