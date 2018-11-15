@@ -16,9 +16,11 @@
       <p class="description">
         <%= descricao %>
       </p>
-      <strong class="highlight speaker-name">
-        Palestrante: <%= speaker %>
-      </strong>
+      <% if speaker.present? %>
+        <strong class="highlight speaker-name">
+          Palestrante: <%= speaker %>
+        </strong>
+      <% end %>
 
     </article>
 
