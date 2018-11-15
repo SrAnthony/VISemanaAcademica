@@ -55,7 +55,11 @@
               Status do pagamento
               <div class="sub header">
                 <br>
-                <% if current_user.transaction_code.present? %>
+                <% if current_user.category == 1 %>
+                  <span class="ui green label">
+                    <i class="icon-like"></i> Liberado ;)
+                  </span>
+                <% elsif current_user.transaction_code.present? %>
                   <% status = current_user.payment_status %>
                   <% if status == -1 %>
                     <span class="ui label">

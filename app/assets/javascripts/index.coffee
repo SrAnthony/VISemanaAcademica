@@ -25,3 +25,5 @@ $(document).on 'turbolinks:load', ->
     allowMultiple: false
   });
   $('.second.modal').modal('attach events', '.first.modal .to-login');
+
+  ScrollOut()

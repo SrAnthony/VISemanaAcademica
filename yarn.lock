@@ -19,6 +19,11 @@ jquery@>=1.8.3:
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
   integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
 
+scroll-out@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/scroll-out/-/scroll-out-2.2.4.tgz#65d8c9269502092d234fc7eec07c6d3400c15958"
+  integrity sha512-GW5L/ti/TwECG+b62YtUASSGjGOBCwkkzTF7bjKsu8UkWO4edVZ4eO7Oy7Idxuk+pzVnmWzOy8Fcpx9OSnIa8A==
+
 sweetalert2@^7.28.11:
   version "7.28.11"
   resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.28.11.tgz#a4f3ef54f28a76f3cbbf8c963c8bc0a03a55208e"
