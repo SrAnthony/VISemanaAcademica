@@ -26,4 +26,6 @@ $(document).on 'turbolinks:load', ->
   });
   $('.second.modal').modal('attach events', '.first.modal .to-login');
 
-  ScrollOut()
+  # Se aberto em PC adiciona efeitos de scroll
+  if $(window).width() > 425
+    ScrollOut()
