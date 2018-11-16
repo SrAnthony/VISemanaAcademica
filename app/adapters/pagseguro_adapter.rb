@@ -17,8 +17,19 @@ class PagseguroAdapter
       end
     end
 
-    def payment_status(user)
-      RestClient.get(API_TRANSACTIONS + user.transaction_code + "?email=#{EMAIL}&token=#{TOKEN}") do |response, request, result|
+    def payment_status(code)
+      RestClient.get(API_TRANSACTIONS + code + "?email=#{EMAIL}&token=#{TOKEN}") do |response, request, result|
+        if response.code == 200
+          response_hash = Hash.from_xml(response.body).deep_symbolize_keys
+          return { status: :ok, response: response_hash }
+        end
+
+        return { status: :error, response: response }
+      end
+    end
+
+    def all_payments
+      RestClient.get(API_TRANSACTIONS + "?email=#{EMAIL}&token=#{TOKEN}&initialDate=2018-11-01T00:00&finalDate=2018-11-16T00:00&page=1") do |response, request, result|
         if response.code == 200
           response_hash = Hash.from_xml(response.body).deep_symbolize_keys
           return { status: :ok, response: response_hash }

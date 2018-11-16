@@ -43,6 +43,15 @@
               </th>
             </tr>
           </thead>
+          <tfoot>
+            <tr>
+              <th class="center aligned">Total de <%= @users.length %> Inscritos</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </tfoot>
           <tbody>
             <% @users.each do |user| %>
               <tr>
