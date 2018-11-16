@@ -98,4 +98,16 @@ class User < ApplicationRecord
 
     payment[:response][:transaction][:status].to_i
   end
+
+  # Membros da staff, com permissão para acessar a Dashboard
+  def staff?
+    email.in? %w[
+      anthony.nadaletti@gmail.com
+      anthony@uffs.cafe
+      sabrina.moczulski@gmail.com
+      andrewsaxx@gmail.com
+      naomi.nfm@gmail.com
+      oborgesrapha@gmail.com
+    ]
+  end
 end

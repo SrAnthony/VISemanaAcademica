@@ -134,6 +134,7 @@
   </div>
 
   <div class="actions">
+    <%= link_to 'Dashboard', dash_path, class: 'ui green button' if current_user.staff? %>
     <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'ui button' %>
   </div>
 
