@@ -9,3 +9,11 @@
     width: 970px
   @media (min-width: 1200px)
     width: 1170px
+
+[data-scroll]
+  transition: transform 2s
+
+[data-scroll='in']
+  transform: translateY(0)
+[data-scroll='out']
+  transform: translateY(50px)

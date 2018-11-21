@@ -93,9 +93,21 @@ class User < ApplicationRecord
   end
 
   def payment_status
-    payment = PagseguroAdapter.payment_status(self)
+    payment = PagseguroAdapter.payment_status(transaction_code)
     return -1 if payment[:status] == :error
 
     payment[:response][:transaction][:status].to_i
+  end
+
+  # Membros da staff, com permissão para acessar a Dashboard
+  def staff?
+    email.in? %w[
+      anthony.nadaletti@gmail.com
+      anthony@uffs.cafe
+      sabrina.moczulski@gmail.com
+      andrewsaxx@gmail.com
+      naomi.nfm@gmail.com
+      oborgesrapha@gmail.com
+    ]
   end
 end

@@ -55,7 +55,11 @@
               Status do pagamento
               <div class="sub header">
                 <br>
-                <% if current_user.transaction_code.present? %>
+                <% if current_user.category == 1 %>
+                  <span class="ui green label">
+                    <i class="icon-like"></i> Liberado ;)
+                  </span>
+                <% elsif current_user.transaction_code.present? %>
                   <% status = current_user.payment_status %>
                   <% if status == -1 %>
                     <span class="ui label">
@@ -130,7 +134,8 @@
   </div>
 
   <div class="actions">
-    <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+    <%= link_to 'Dashboard', dash_path, class: 'ui green button' if current_user.staff? %>
+    <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'ui button' %>
   </div>
 
 </div> <!-- Modal -->

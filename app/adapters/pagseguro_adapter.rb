@@ -17,14 +17,38 @@ class PagseguroAdapter
       end
     end
 
-    def payment_status(user)
-      RestClient.get(API_TRANSACTIONS + user.transaction_code + "?email=#{EMAIL}&token=#{TOKEN}") do |response, request, result|
+    def payment_status(code)
+      RestClient.get(API_TRANSACTIONS + code + "?email=#{EMAIL}&token=#{TOKEN}") do |response, request, result|
         if response.code == 200
           response_hash = Hash.from_xml(response.body).deep_symbolize_keys
           return { status: :ok, response: response_hash }
         end
 
         return { status: :error, response: response }
+      end
+    end
+
+    def all_payments
+      RestClient.get(API_TRANSACTIONS + "?email=#{EMAIL}&token=#{TOKEN}&initialDate=2018-11-01T00:00&finalDate=2018-#{Date.current.month}-#{Date.current.day}T00:00&page=1") do |response, request, result|
+        if response.code == 200
+          response_hash = Hash.from_xml(response.body).deep_symbolize_keys
+          return { status: :ok, response: response_hash }
+        end
+
+        return { status: :error, response: response }
+      end
+    end
+
+    def update_users_transaction_code
+      all_payments[:response][:transactionSearchResult][:transactions][:transaction].each do |transaction|
+        code = transaction[:code]
+        status = payment_status code
+        user_email = status[:response][:transaction][:sender][:email]
+        puts "Transação de #{user_email}"
+        user = User.find_by email: user_email
+        next if user.blank? || user.transaction_code.present?
+        puts "Atualizando usuário..."
+        user.update!(transaction_code: code)
       end
     end
 

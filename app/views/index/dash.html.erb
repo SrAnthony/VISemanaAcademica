@@ -1,0 +1,120 @@
+<%= content_for :javascript do %>
+  <script>
+    $('#modal-dashboard')
+      .modal('setting', 'transition', 'fade up')
+      .modal('setting', 'closable', false)
+      .modal('show');
+  </script>
+<% end %>
+
+<%= render 'index/header' %>
+
+<div class="ui modal" id="modal-dashboard">
+
+  <div class="content">
+
+    <h2 class="ui center aligned lined header">
+      <div class="content">
+        Dashboard
+      </div>
+    </h2>
+
+    <p class="text-center form-subtitle">
+      Olá, <%= current_user.name %>!<br>
+    </p>
+
+    <div class="description">
+      <div class="table-center">
+
+        <table class="ui very basic collapsing celled selectable table">
+          <thead>
+            <tr>
+              <th class="center aligned">
+                <h3 class="ui header">Inscrito</h3>
+              </th>
+              <th class="center aligned">
+                <h3 class="ui header">Categoria</h3>
+              </th>
+              <th class="center aligned">
+                <h3 class="ui header">Valor</h3>
+              </th>
+              <th class="center aligned">
+                <h3 class="ui header">Status do pagamento</h3>
+              </th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th class="center aligned">Total de <%= @users.length %> Inscritos</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td>
+                  <h4 class="ui image header">
+                    <i class="icon-user"></i>&nbsp;
+                    <div class="content">
+                      <%= user.name %>
+                      <div class="sub header">
+                        <%= user.email %>
+                      </div>
+                    </div>
+                  </h4>
+                </td>
+                <td class="center aligned">
+                  <%= user.category_name %>
+                </td>
+                <td class="center aligned">
+                  <%= user.category_named_price %>
+                </td>
+                <td class="center aligned">
+                  <% if user.category == 1 %>
+                    <span class="ui green label">
+                      Gratuito
+                    </span>
+                  <% elsif user.transaction_code.present? %>
+                    <% status = user.payment_status %>
+                    <% if status == -1 %>
+                      <span class="ui label">
+                        <i class="icon-hourglass"></i> Aguardando...
+                      </span>
+                    <% elsif status.in? [1, 2, 3] %>
+                      <span class="ui green label">
+                        <i class="icon-like"></i> Pago! :)
+                      </span>
+                    <% elsif status.in? [4, 5] %>
+                      <span class="ui red label">
+                        <i class="icon-dislike"></i> Cancelado :/
+                      </span>
+                    <% else %>
+                      <span class="ui image yellow label">
+                        <i class="dollar sign icon"></i> Pendente
+                      </span>
+                    <% end %>
+                  <% else %>
+                    <span class="ui image yellow label">
+                      <i class="dollar sign icon"></i> Pendente
+                    </span>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+      </div> <!-- table-center -->
+    </div> <!-- description -->
+
+  </div>
+
+  <div class="actions">
+    <%= link_to 'Minha conta', user_account_path, class: 'ui green button' %>
+    <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'ui button' %>
+  </div>
+
+</div> <!-- Modal -->

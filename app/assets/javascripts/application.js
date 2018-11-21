@@ -15,4 +15,8 @@
 //= require turbolinks
 //= require jquery
 //= require semantic-ui
+//= require jquery.nicescroll/jquery.nicescroll
+//= require sweetalert2/dist/sweetalert2.all.min
+//= require jquery-mask-plugin/dist/jquery.mask.min
+//= require scroll-out/dist/scroll-out.min
 //= require_tree .
