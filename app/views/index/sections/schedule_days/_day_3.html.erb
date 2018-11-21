@@ -1,8 +1,8 @@
-<div id="schedule-day-3" class="tab-pane ">
+<div id="schedule-day-3" class="tab-pane active">
   <!-- Second level content start -->
   <div class="tab-content tab-content-schedule">
     <!-- Main content start -->
-    <div class="tab-pane">
+    <div class="tab-pane active">
       <!-- Accordion start -->
       <div class="panel-group">
 
@@ -19,6 +19,14 @@
           time: '13:30 - 15:00',
           place: 'Auditório bloco B',
           descricao: 'Dívida técnica é a soma de alguns tipos de pendências no seu projeto que podem impedir a evolução do mesmo. Entretanto, esse conceito é muito mais abrangente do que isso, por isso a Profº Graziela Tonin irá esclarecer melhor sobre esse assunto.'
+        %>
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-people"></i>',
+          speaker: 'Ana Marcia Debiasi Duarte',
+          title: 'Dívida técnica',
+          time: '19:30 - 21:00',
+          place: 'Sala 401 B',
+          descricao: 'Saiba mais sobre Qualidade de software e certificações e trilhe uma grande carreira na área de T.I.'
         %>
 
         <!-- =============================================================================== -->
@@ -45,7 +53,7 @@
           image: image_tag('speakers/galli.jpg', class: 'img-responsive', width: '100%'),
           speaker: 'Gabriel Galli',
           title: 'Workshop Latex',
-          time: '19:00 - 20:30',
+          time: '19:00 - 22:00',
           place: 'LAB 402 B',
           descricao: 'Sem mais sufoco para formatações de trabalhos, artigos, monografias e muitos mais com essa ferramenta PODEROSÍSSIMA!'
         %>
@@ -54,21 +62,22 @@
         <!-- =============================================================================== -->
         <!-- =============================================================================== -->
 
-        <!-- <div class="ui hidden divider"></div>
+      <div class="ui hidden divider"></div>
         <div class="panel schedule-item">
           <div class="schedule-item-body">
             <h2><i class="icon-microphone"></i> Atividades</h2>
           </div>
         </div>
 
-        <%#= render 'index/sections/schedule_days/template',
+
+        <%= render 'index/sections/schedule_days/template',
           image: image_tag('speakers/denioduarte.jpg', class: 'img-responsive', width: '100%'),
           speaker: 'Profº Denio Duarte',
           title: 'Cinedebate: Big Data e o Poder da Informação',
           time: '15:30 - 17:00',
-          place: 'SALA 401 B',
+          place: 'Auditório bloco B',
           descricao: 'Devemos nos preocupar com informações das nossas vidas expostas online? A matemática Hannah Fry desvenda o big data. E explica de forma simples e bem-humorada essa alta tecnologia que captura, armazena e compartilha tudo que fazemos no mundo virtual. A história começa com Claude Shannon, que, para acabar com os ruídos das linhas telefônicas, digitalizou o processo e criou a "Era da Informação.'
-        %> -->
+        %>
 
       </div>
       <!-- Accordion end -->
