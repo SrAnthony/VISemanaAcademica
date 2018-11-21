@@ -68,12 +68,20 @@
             <h2><i class="icon-microphone"></i> Atividades</h2>
           </div>
         </div>
+        <%= render 'index/sections/schedule_days/template',
+          image: '<i class="icon-trophy"></i>',
+          speaker: '',
+          title: 'Campeonato de LOL',
+          time: '13:30 - 17:00',
+          place: 'LAB 405 B e LAB 403',
+          descricao: 'Inscrições para quem tem uma equipe montada  neste <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-dCr28sbYmdRIOcZUz7nb4ZHR2wom8F5vJDF3IaKUoksj6w/viewform">link</a> e inscrições para que não tem equipe, mas quer participar neste <a href="https://docs.google.com/forms/d/e/1FAIpQLSdj3pMwqgnkGnqagsXoOMDeAwAwXo_AYXLhJ9c8gIeRJdEIuQ/viewform">link</a>'
+        %>
 
         <%= render 'index/sections/schedule_days/template',
-          image: image_tag('speakers/denioduarte.jpg', class: 'img-responsive', width: '100%'),
+          image: image_tag('speakers/marco.jpg', class: 'img-responsive', width: '100%'),
           speaker: 'Profº Marco Spohn',
           title: 'Cinedebate: Homem x Maquina',
-          time: '19:30 - 21:00',
+          time: '15:30 - 17:00',
           place: 'SALA 308 B',
           descricao: 'A internet não é mais somente uma rede de computadores e servidores. Agora ela está presente em objetos inteligentes que nos conhecem, sabem o que gostamos de comer e as músicas que gostamos de ouvir. São devices inusitados que nos escutam, nos influenciam e fazem parte das nossas vidas. Se a internet ganhou um corpo, até onde ela pode ir?'
         %>
